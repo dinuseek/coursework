@@ -38,7 +38,7 @@ class LL1Parser:
         graph.format = 'png'
 
         stack = [Terminal('$'), self.builder.grammar.start]
-        input_string += '$'
+        input_string += ' $'
         input_seq = self.builder.grammar.str_to_seq(input_string)
         input_index = 0
 
