@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 50pt;
+    margin-top: 30pt;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.transformation {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #EFEfEf;
+    color: black;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.analysis {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: darkgrey;
+    color: black;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.mode-button {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #EFEfEf;
+    color: black;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.content {
+    margin-top: 30pt;
+    display: flex;
+}
+
+.left-block {
+    flex: 1;
+    text-align: center;
+    font-size: 20pt;
+}
+
+.right-block {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    width: 100%;
+    height: 200px;
+    resize: vertical;
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 22px;
+}
+
+.input-field::placeholder {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 22px;
+    color: #999;
+}
+
+.submit-button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: yellowgreen;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.footer {
+    margin-top: 30pt;
+    display: flex;
+    justify-content: space-between;
+}
+
+.block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.delete-epsilon {
+    margin-top: 10px;
+    font-size: 20px;
+    background-color: #EFEfEf;
+    box-sizing: border-box;
+    color: black;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.delete-recursion {
+    margin-top: 10px;
+    font-size: 20px;
+    background-color: #EFEfEf;
+    box-sizing: border-box;
+    color: black;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.delete-branching {
+    margin-top: 10px;
+    font-size: 20px;
+    background-color: #EFEfEf;
+    box-sizing: border-box;
+    color: black;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.message {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.selected {
+    background-color: darkgray;
+}
+
+.process {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: yellowgreen;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.output {
+    margin-top: 30pt;
+    display: flex;
+    justify-content: space-around;
+    overflow: auto;
+    width: 100%;
+}
+
+#seq-out{
+    display: block;
+}
+
+table{
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid;
+}

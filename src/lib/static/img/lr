@@ -1,0 +1,13 @@
+// LR1 Tree
+digraph {
+	graph [rankdir=LR]
+	0 [label="d d $"]
+	1 [label="C d $"]
+	0 -> 1 [label="C := d"]
+	1 [label="C d $"]
+	2 [label="C C $"]
+	1 -> 2 [label="C := d"]
+	2 [label="C C $"]
+	3 [label="S $"]
+	2 -> 3 [label="S := C C"]
+}

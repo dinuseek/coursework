@@ -1,0 +1,6 @@
+// LL1 Tree
+digraph {
+	0 [label=A]
+	2 [label=c]
+	0 -> 2
+}

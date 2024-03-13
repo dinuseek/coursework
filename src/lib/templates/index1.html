@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Макет страницы</title>
+    <link rel="stylesheet" href="../static/styles1.css">
+</head>
+
+<body>
+<div class="header">
+    <button class="transformation" onclick="loadIndex()">Операции преобразования</button>
+    <button class="analysis">Анализ грамматик</button>
+</div>
+<div class="header">
+    <button id="ll" class="mode-button" onclick="changeMode(this)">LL(1)-разбор</button>
+    <button id="lr" class="mode-button" onclick="changeMode(this)">LR(1)-разбор</button>
+    <button id="earley" class="mode-button" onclick="changeMode(this)">Алгоритм Эрли</button>
+
+</div>
+<div class="content">
+    <div class="left-block">
+        <p>Введите грамматику:</p>
+        <p id="grammar-errors" class="error"></p>
+
+    </div>
+    <div class="right-block">
+        <textarea class="input-field" id="input-grammar" placeholder="Введите текст..."></textarea>
+        <button class="submit-button" onclick=processGrammar()>Отправить</button>
+    </div>
+    <div class="left-block">
+        <p id="seq-errors" class="error"></p>
+        <p>Введите входную цепочку:</p>
+    </div>
+    <div class="right-block">
+        <textarea class="input-field" id="input-seq" placeholder="Введите текст..."></textarea>
+        <button class="submit-button" onclick=processSeq()>Отправить</button>
+    </div>
+</div>
+<div>
+    <div class="output" id="seq-out">
+    </div>
+    <div class="output" id="grammar-out">
+    </div>
+</div>
+<script src="../static/script.js"></script>
+</body>
+
+</html>

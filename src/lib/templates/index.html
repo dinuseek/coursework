@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Макет страницы</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+<div class="header">
+    <button class="transformation">Операции преобразования</button>
+    <button class="analysis" onclick="loadIndex1()">Анализ грамматик</button>
+</div>
+<div class="content">
+    <div class="left-block">
+        <p>Введите грамматику:</p>
+        <p id="grammar-errors" class="error"></p>
+    </div>
+    <div class="right-block">
+        <textarea class="input-field" id="input-grammar" placeholder="Введите текст..."></textarea>
+        <button class="submit-button" onclick="processGrammar('input-grammar')">Отправить</button>
+    </div>
+</div>
+<div>
+    <div class="footer">
+        <div class="block">
+            <button class="delete-epsilon" onclick="apply_operation(0)">Удалить эпсилон правила</button>
+        </div>
+        <div class="block">
+            <button class="delete-recursion" onclick="apply_operation(1)">Устранить левую рекурсию</button>
+        </div>
+        <div class="block">
+            <button class="delete-branching" onclick="apply_operation(2)">Устранить правое ветвление</button>
+        </div>
+    </div>
+    <div class="output" id="grammar-out">
+
+    </div>
+</div>
+
+<script src="../static/script.js"></script>
+</body>
+
+</html>
