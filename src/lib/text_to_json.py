@@ -27,7 +27,7 @@ def convert_text_to_json(text):
                     nterms.append(symbol)
 
         for symbol in right_part.split():
-            if symbol not in nterms:
+            if symbol not in nterms and symbol not in terms:
                 terms.append(symbol)
 
         if '.' in terms:
