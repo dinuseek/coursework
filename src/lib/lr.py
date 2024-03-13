@@ -138,7 +138,7 @@ class LR1Parser:
         node_idx = 0
 
         stack = [0]
-        input_string += '$'
+        input_string += ' $'
         input_seq = self.builder.grammar.str_to_seq(input_string)
         input_index = 0
 
