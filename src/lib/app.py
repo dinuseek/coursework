@@ -2,9 +2,9 @@ from flask import Flask, render_template, request, jsonify
 
 from builder import Builder
 from grammar import GrammarReader
-from src.lib.earley import EarleyParser
-from src.lib.ll import LL1Parser
-from src.lib.lr import LR1Parser
+from earley import EarleyParser
+from ll import LL1Parser
+from lr import LR1Parser
 from text_to_json import convert_text_to_json
 
 app = Flask(__name__)
