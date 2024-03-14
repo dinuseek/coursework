@@ -83,7 +83,7 @@ class Grammar:
 
     def str_to_seq(self, s: str) -> List[Union[Terminal, NTerminal]]:
         seq = []
-        for symbol in s.split(' '):
+        for symbol in s.strip().split(' '):
             if symbol in self.terms:
                 seq.append(Terminal(symbol))
             elif symbol in self.nterms:
