@@ -42,6 +42,8 @@ class LR1Parser:
 
     def __init__(self, builder: Builder):
         self.builder = builder
+        if len(builder.get_epsilon_gens()):
+            raise Exception('Grammar has epsilon rules')
         builder.build_first()
         builder.build_follow()
         self.sets: List[Set[Situation]] = []
