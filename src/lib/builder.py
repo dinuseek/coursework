@@ -60,22 +60,13 @@ class Builder:
                         continue
 
                     first_ = self.get_first(rule.right[i + 1:])
-                    if isinstance(first_, Terminal) or isinstance(first_, Epsilon):
-                        if first_ not in self.follow[symbol]:
-                            self.follow[symbol].add(first_)
-                            changed = True
-                        break
-                    elif isinstance(first_, set):
-                        if first_ - {Epsilon()} - self.follow[symbol]:
-                            self.follow[symbol] |= first_ - {Epsilon()}
-                            changed = True
+                    if first_ - {Epsilon()} - self.follow[symbol]:
+                        self.follow[symbol] |= first_ - {Epsilon()}
+                        changed = True
 
-                        if Epsilon() in first_:
-                            if self.follow[left] - self.follow[symbol]:
-                                self.follow[symbol] |= self.follow[left]
-                                changed = True
-                        else:
-                            break
+                    if Epsilon() in first_:
+                        if self.follow[left] - self.follow[symbol]:
+                            self.follow[symbol] |= self.follow[left]
 
     def get_epsilon_gens(self):
         epsilone_gens = set()
